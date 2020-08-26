@@ -11,7 +11,7 @@ after_success:
     - docker build -t waritsan/multi-server ./server
     - docker build -t waritsan/multi-worker ./worker
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-    - docker pusn waritsan/multi-client
+    - docker push waritsan/multi-client
     - docker push waritsan/multi-nginx
     - docker push waritsan/multi-server
     - docker push waritsan/multi-worker
