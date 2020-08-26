@@ -1,7 +1,7 @@
 sudo: required
 services:
     - docker
-before_install:g
+before_install:
     - docker build -t waritsan/react-test -f ./client/Dockerfile.dev ./client
 script:
     - docker run -e CI=true waritsan/react-test npm test -- --coverage
